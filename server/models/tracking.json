@@ -1,0 +1,22 @@
+{
+  "name": "tracking",
+  "plural": "trackings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tracker": {
+      "type": "string",
+      "required": true
+    },
+    "stamp": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
