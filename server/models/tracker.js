@@ -3,12 +3,12 @@
 module.exports = (Tracker) => {
   Tracker.track = (id, cb) => {
     var app = Tracker.app;
-    console.log();
 
     Tracker.findById(id, (err, object) => {
       if (err) {
         let error = new Error('Error getting tracker');
         error.status = 401;
+        // TODO ADD TO LOGGER
         cb(error);
       } else if (object == null) {
         let error = new Error('No tracker found');
@@ -22,10 +22,12 @@ module.exports = (Tracker) => {
           if (trackingError) {
             let error = new Error('Error setting new tracking');
             error.status = 402;
+            // TODO ADD TO LOGGER
             cb(error);
           } else if (tracking == null) {
             let error = new Error('No tracking found');
             error.status = 403;
+            // TODO ADD TO LOGGER
             cb(error);
           } else {
             object.count += 1;
@@ -49,6 +51,6 @@ module.exports = (Tracker) => {
       verb: 'post',
       path: '/track',
     },
-    returns: { arg: 'count', type: 'string' },
+    returns: {arg: 'count', type: 'string'},
   });
 };
