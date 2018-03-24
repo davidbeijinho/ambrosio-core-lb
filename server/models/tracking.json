@@ -13,6 +13,14 @@
     },
     "stamp": {
       "type": "date"
+    },
+    "count": {
+      "type": "number",
+      "default": 0
+    },
+    "location": {
+      "type": "GeoPoint",
+      "required": false
     }
   },
   "validations": [],

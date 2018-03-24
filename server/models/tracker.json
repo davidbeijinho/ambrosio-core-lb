@@ -15,6 +15,10 @@
     "count": {
       "type": "number",
       "default": 0
+    },
+    "location": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
