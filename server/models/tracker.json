@@ -19,6 +19,10 @@
     "location": {
       "type": "boolean",
       "default": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
